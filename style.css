@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 30px 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input, button, .to-login, .to-register {
+    padding: 8px 14px;
+    width: 300px;
+    max-width: 400px;
+    border: 2px solid #a4a4a4;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    font-size: 1.125rem;
+    outline: none;
+}
+
+input::placeholder {
+    font-size: 1.125rem;
+}
+
+.sign-up button, .login button {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.to-login, .to-register {
+    background-color: #42b72a;
+    color: white;
+    border: none;
+}
+
+.to-login, .to-register  {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1875rem;
+    text-decoration: none;
+}
+
+.to-login a, .forgot-password a, .to-register a {
+    text-decoration: none;
+}
+
+.left-register h1, .left-login h1 {
+    color: #1777ee;
+}
+
+button {
+    background-color: #1777ee;
+    outline: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.sign-up button, .login button {
+    font-size: 1.1875rem;
+}
+
+h4 {
+    max-width: 350px;
+}
+
+.left-login h4, .left-register h4 {
+    font-weight: 400;
+}
+
+@media (min-width: 992px) {
+    
+    body {
+        height: 100vh;
+    }
+
+    h4 {
+        max-width: 550px;
+    }
+}
