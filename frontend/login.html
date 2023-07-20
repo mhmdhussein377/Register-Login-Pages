@@ -12,9 +12,9 @@
         <title>Login Page</title>
     </head>
     <body class="w-100 d-flex justify-content-center container gap-5">
-        <div class="login d-flex flex-column gap-4 register row flex-lg-row align-items-lg-center gap-lg-5">
-            <div
-                class="left-login d-flex flex-column gap-3 text-center col text-lg-start">
+        <div
+            class="login d-flex flex-column gap-4 register row flex-lg-row align-items-lg-center gap-lg-5">
+            <div class="left-login d-flex flex-column gap-3 text-center col text-lg-start">
                 <h1 class="text-center fw-bold text-lg-start">MhmdSocial</h1>
                 <h4 class="">Connect with friends and the world around you on MhmdSocial.</h4>
             </div>
@@ -30,7 +30,9 @@
                         <button class="w-100">Login</button>
                     </div>
                 </form>
-                <div class="forgot-password w-100 text-start">
+                <p class="text-start m-0 text-danger hide user-not-found fw-medium">User not found</p>
+                <p class="text-start m-0 text-danger hide wrong-password fw-medium">Wrong password</p>
+                <div class="forgot-password w-100 text-start ">
                     <a href="#" class="w-100">Forgot password?</a>
                 </div>
                 <a href="./index.html" class="to-register w-100 text-center m-auto">

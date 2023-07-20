@@ -11,6 +11,8 @@ document
         const password = document
             .querySelector(".signin-form .password")
             .value;
+        const wrongPasswordElement = document.querySelector(".wrong-password")
+        const userNotFoundElement = document.querySelector(".user-not-found")
 
         let signinData = new URLSearchParams();
         signinData.append("username", username);
@@ -24,10 +26,28 @@ document
             body: signinData
         }).then((respnse) => respnse.json()).then((data) => {
             console.log(data)
-            if(data.status === "logged in") {
-                console.log("logged in")
+            if (data.status === "logged in") {
+                localStorage.setItem("username", data.username)
+                window.location.href = "/frontend/dashboard.html";
+            } else if (data.status === "wrong password") {
+                wrongPasswordElement
+                    .classList
+                    .add("show");
+                setTimeout(() => {
+                    wrongPasswordElement
+                        .classList
+                        .remove("show")
+                }, 3000)
+            } else {
+                userNotFoundElement
+                    .classList
+                    .add("show")
+                setTimeout(() => {
+                    userNotFoundElement
+                        .classList
+                        .remove("show");
+                }, 3000);
             }
-            // window.location.href = "dashboard.html"
         }).catch((error) => {
             console.log(error);
         });

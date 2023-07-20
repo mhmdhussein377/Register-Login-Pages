@@ -29,6 +29,8 @@ if ($username_exists == 0 && $email_exists == 0 && $password == $confirm_passwor
 
     $response['status'] = "success";
     $response['message'] = "another message in success";
+    $response['username'] = $username;
+        $response['email'] = $email;
 } else {
     $response['status'] = "failed";
     $response['message'] = "another message in fail";

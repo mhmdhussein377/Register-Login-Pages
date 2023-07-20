@@ -13,6 +13,14 @@ a {
     text-decoration: none;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 input, button, .to-login, .to-register {
     padding: 8px 14px;
     width: 300px;
@@ -89,4 +97,15 @@ h4 {
     h4 {
         max-width: 550px;
     }
+}
+
+.dashboard {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dashboard p {
+    font-size: 1.25rem;
 }
