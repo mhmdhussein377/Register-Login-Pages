@@ -1,7 +1,9 @@
 document
-    .getElementById('signin-form')
-    .addEventListener('submit', function (event) {
-        event.preventDefault()
+    .getElementById("signin-form")
+    .addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const base_url = "http://localhost/RegisterLogin/backend";
 
         const username = document
             .querySelector(".signin-form .username")
@@ -14,14 +16,18 @@ document
         signinData.append("username", username);
         signinData.append("password", password);
 
-        fetch("http://localhost/signuplogin/signup.php", {
+        fetch(base_url + "/signin.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             body: signinData
         }).then((respnse) => respnse.json()).then((data) => {
-            console.log("Response from server: ", data);
+            console.log(data)
+            if(data.status === "logged in") {
+                console.log("logged in")
+            }
+            // window.location.href = "dashboard.html"
         }).catch((error) => {
             console.log(error);
         });
